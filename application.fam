@@ -1,0 +1,8 @@
+App(
+    appid="media_scroller",
+    name="Media Scroller",
+    apptype=FlipperApplicationType.EXTERNAL,
+    entry_point=media_scroller_app,
+    stack_size=1K,
+    icon="A_Plugins_14",
+)
