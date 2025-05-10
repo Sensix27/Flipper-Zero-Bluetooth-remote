@@ -1,0 +1,13 @@
+name: Build FAP
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: flipperdevices/flipperzero-ufbt-action@v1
+      - run: ufbt build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: media_scroller.fap
+          path: build/latest/build/f7-firmware-D/.extapps/media_scroller.fap
